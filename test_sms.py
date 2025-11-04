@@ -2,7 +2,7 @@ from flask import Flask, request
 import requests
 import random
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # 🟢 ADRES TWOJEGO TELEFONU Z APLIKACJĄ SMS GATEWAY
 PHONE_IP = "http://192.168.8.161:8080"  # ← tu wpiszesz swój nowy adres IP z aplikacji Simple SMS Gateway
@@ -31,4 +31,5 @@ def send_sms():
 
 
 if _name_ == '_main_':
+
     app.run(host='0.0.0.0', port=5000)
